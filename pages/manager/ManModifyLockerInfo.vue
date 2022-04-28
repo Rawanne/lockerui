@@ -1,0 +1,78 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col>
+        <v-card>
+          <v-card-title class="text-h5 font-weight-regular pink darken-1 white--text">
+            Modify Locker
+          </v-card-title>
+          <v-card-text>
+            <v-subheader class="pa-0"> Enter building number: </v-subheader>
+            <v-autocomplete
+              v-model="model"
+              :hint="!isEditing ? 'Click the icon to edit' : 'Click the icon to save'"
+              :items="states"
+              :readonly="!isEditing"
+              :label="`State — ${isEditing ? 'Editable' : 'Readonly'}`"
+              persistent-hint
+              prepend-icon="mdi-locker-multipleD">
+              <template #append-outer>
+                <v-slide-x-reverse-transition mode="out-in">
+                  <v-icon
+                    :key="`icon-${isEditing}`"
+                    :color="isEditing ? 'success' : 'info'"
+                    @click="isEditing = !isEditing"
+                    v-text="isEditing ? 'mdi-check-outline' : 'mdi-circle-edit-outline'"></v-icon>
+                </v-slide-x-reverse-transition>
+              </template>
+            </v-autocomplete>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn rounded color="error" @click="del"> Delete </v-btn>
+            <v-btn rounded color="#FDBFA8" class="mr-4" @click="goToAddLocker()">
+              Add Locker
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <form action="">
+          <v-textarea
+            clearable
+            clear-icon="mdi-close-circle"
+            label="locker information:"
+            value="change locker information here..."></v-textarea>
+          <v-btn rounded class="mr-4" @click="submit"> submit </v-btn>
+        </form>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      loading: false,
+      selection: 1,
+      isEditing: false,
+      model: null,
+      states: ['locker1', 'locker2', 'locker3', 'locker4'],
+    }
+  },
+  methods: {
+    goToAddLocker() {
+      this.$router.push('/manager/AddLocker')
+    },
+    submit() {
+      this.$refs.observer.validate()
+    },
+    del() {
+      this.loading = true
+      setTimeout(() => (this.loading = false), 2000)
+    },
+  },
+}
+</script>
