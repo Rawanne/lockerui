@@ -20,7 +20,7 @@
               <h1 class="h1mar">Save your Time</h1>
               <h1>& Effort Now!</h1>
               <em class="emstyle"> Locker Management & Reservation System (LMS) </em>
-              <v-col> <v-btn class= "btst" style="color: white" color="#D43256" rounded> log in </v-btn> </v-col>
+               <v-col> <v-btn v-if="!loggedIn" @click="handleClick" class= "btst" style="color: white" color="#D43256" rounded>Log in</v-btn> </v-col>
             </v-layout>
 
             <h2 class="vtitel">Who Can Use LMRS?</h2>
