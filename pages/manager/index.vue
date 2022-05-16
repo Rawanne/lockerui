@@ -5,15 +5,8 @@
       <v-item-group>
         <v-container>
           <v-row align="center">
-            <v-col cols="10" md="2">
-              <NuxtLink to="/manager/ManDashboard">
-                <v-btn color="#D43256" elevation="4" icon x-large rounded>
-                  <v-icon size="100" dark> mdi-monitor-dashboard </v-icon>
-                </v-btn>
-                <p>Dashboard</p>
-              </NuxtLink>
-            </v-col>
-            <v-col cols="10" md="2">
+           
+            <v-col cols="12" md="4">
               <NuxtLink to="/manager/ManReserve">
                 <v-btn color="#D43256" elevation="4" icon x-large rounded>
                   <v-icon size="100" dark> mdi-locker </v-icon>
@@ -21,15 +14,7 @@
                 <p>Reserve locker for studnet</p>
               </NuxtLink>
             </v-col>
-            <v-col cols="10" md="2">
-              <NuxtLink to="/manager/ManGenReport">
-                <v-btn color="#D43256" elevation="4" icon x-large rounded>
-                  <v-icon size="100" dark> mdi-file-chart </v-icon>
-                </v-btn>
-                <p>Generate reports</p>
-              </NuxtLink>
-            </v-col>
-            <v-col cols="10" md="2">
+            <v-col cols="12" md="4">
               <NuxtLink to="/manager/ManModifyLockerInfo">
                 <v-btn color="#D43256" elevation="4" icon x-large rounded>
                   <v-icon size="100" dark> mdi-locker-multiple </v-icon>
@@ -37,7 +22,7 @@
                 <p>Modify lockers info</p>
               </NuxtLink>
             </v-col>
-            <v-col cols="10" md="2">
+            <v-col cols="12" md="4">
               <NuxtLink to="/manager/ManModifyBuildingInfo">
                 <v-btn color="#D43256" elevation="4" icon x-large rounded>
                   <v-icon size="100" dark> mdi-domain </v-icon>

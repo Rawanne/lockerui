@@ -5,15 +5,10 @@
       <v-item-group>
         <v-container>
           <v-row align="center">
-            <v-col class="d-flex" cols="12" md="4">
-              <NuxtLink to="/emp/EmpDashboard">
-                <v-btn color="#D43256" elevation="4" icon x-large rounded>
-                  <v-icon size="100" dark> mdi-monitor-dashboard </v-icon>
-                </v-btn>
-                <p>Dashboard</p>
-              </NuxtLink>
+            <v-col class="d-flex" cols="12" md="1">
+             
             </v-col>
-            <v-col class="d-flex" cols="12" md="4">
+            <v-col class="d-flex" cols="12" md="7">
               <NuxtLink to="/emp/EmpReserve">
                 <v-btn color="#D43256" elevation="4" icon x-large rounded>
                   <v-icon size="100" dark> mdi-locker-multiple </v-icon>
@@ -21,7 +16,7 @@
                 <p>Reserve locker for student</p>
               </NuxtLink>
             </v-col>
-            <v-col class="d-flex" cols="12" md="4">
+            <v-col class="d-flex" cols="12" md="3">
               <NuxtLink to="/emp/EmpMaintenanceReport">
                 <v-btn color="#D43256" elevation="4" icon x-large rounded>
                   <v-icon size="100" dark> mdi-tools </v-icon>

@@ -13,6 +13,7 @@
         </div>
       </div>
       <h2 class="h1mar" style="text-align: center margin-top: 50px;">Our Team</h2>
+
       <div class="row h1mar">
         <div class="column">
           <div class="card">
@@ -22,7 +23,7 @@
               <p class="title">Leader</p>
               <p>Back end Team</p>
               <p>ishargawi@stu.kau.edu.sa</p>
-              <p><button class="button">Contact</button></p>
+              <p><a :href="'mailto:' + email2" class="button">Contact</a></p>
             </div>
           </div>
         </div>
@@ -35,7 +36,7 @@
               <p class="title">Team member</p>
               <p>Front end Team</p>
               <p>ralmalki0268@stu.kau.edu.sa</p>
-              <p><button class="button">Contact</button></p>
+              <p><a :href="'mailto:' + email1" class="button">Contact</a></p>
             </div>
           </div>
         </div>
@@ -48,7 +49,7 @@
               <p class="title">Team member</p>
               <p>Back end Team</p>
               <p>gghamdi0005@stu.kau.edu.sa</p>
-              <p><button class="button">Contact</button></p>
+              <p><a :href="'mailto:' + email4" class="button">Contact</a></p>
             </div>
           </div>
         </div>
@@ -61,7 +62,7 @@
               <p class="title">Team member</p>
               <p>Front end Team</p>
               <p>balnakhbi@stu.kau.edu.sa</p>
-              <p><button class="button">Contact</button></p>
+              <p><a :href="'mailto:' + email3" class="button">Contact</a></p>
             </div>
           </div>
         </div>
@@ -73,6 +74,12 @@
 <script>
 export default {
   name: 'AboutUs',
+  data: () => ({
+    email1: 'ralmalki0268@stu.kau.edu.sa',
+    email2: 'ishargawi@stu.kau.edu.sa',
+    email3: 'balnakhbi@stu.kau.edu.sa',
+    email4: 'gghamdi0005@stu.kau.edu.sa',
+  })
 }
 </script>
 <style scoped>

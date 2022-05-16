@@ -3,7 +3,7 @@
     <v-col cols="12" sm="8" md="12">
       <v-card>
         <section>
-          <v-parallax src="Blob.png" height="1200" width="4700">
+          <v-parallax src="Blob.png" height="900" width="4700">
             <v-layout column align-left justify-center>
               <div class="box">
                 <div>
@@ -20,23 +20,57 @@
               <h1 class="h1mar">Save your Time</h1>
               <h1>& Effort Now!</h1>
               <em class="emstyle"> Locker Management & Reservation System (LMS) </em>
-              <v-col> <v-btn style="color: white" color="#D43256" rounded>log in</v-btn> </v-col>
+              <v-col> <v-btn class= "btst" style="color: white" color="#D43256" rounded> log in </v-btn> </v-col>
             </v-layout>
-            
+
             <h2 class="vtitel">Who Can Use LMRS?</h2>
             <v-item-group>
               <v-container>
                 <v-row>
-                  <v-col v-for="n in 3" :key="n" cols="12" md="4">
-                    <v-item v-slot="{active, toggle}">
+                  <v-col cols="12" md="4">
+                    <v-item>
                       <v-card
-                        :color="active ? '#EEEEEE' : ''"
                         class="d-flex align-center rounded-xl"
                         height="200"
                         width="300"
                         @click="toggle">
                         <v-scroll-y-transition>
-                          <div v-if="active" class="text-h2 flex-grow-1 text-center"></div>
+                          <div class="text-h2 flex-grow-1 text-center">
+                            <v-icon size="60px" color="#D43256">mdi-cog</v-icon>
+                            <p>Managers</p>
+                          </div>
+                        </v-scroll-y-transition>
+                      </v-card>
+                    </v-item>
+                  </v-col>
+                  <v-col cols="12" md="4">
+                    <v-item>
+                      <v-card
+                        class="d-flex align-center rounded-xl"
+                        height="200"
+                        width="300"
+                        @click="toggle">
+                        <v-scroll-y-transition>
+                          <div class="text-h2 flex-grow-1 text-center">
+                            <v-icon size="60px" color="#D43256">mdi-briefcase</v-icon>
+                            <p>Employees</p>
+                          </div>
+                        </v-scroll-y-transition>
+                      </v-card>
+                    </v-item>
+                  </v-col>
+                  <v-col cols="12" md="4">
+                    <v-item>
+                      <v-card
+                        class="d-flex align-center rounded-xl"
+                        height="200"
+                        width="300"
+                        @click="toggle">
+                        <v-scroll-y-transition>
+                          <div class="text-h2 flex-grow-1 text-center">
+                            <v-icon size="60px" color="#D43256">mdi-school</v-icon>
+                            <p>Student</p>
+                          </div>
                         </v-scroll-y-transition>
                       </v-card>
                     </v-item>
@@ -56,9 +90,7 @@
           reservation problems. Also, solve student affairs employees’ and managers' problems with
           managing and keeping track of the system updat</v-card-title
         >
-        <v-card-text>
-          <v-btn style="color: white" color="#D43256" rounded>learn more</v-btn>
-        </v-card-text>
+      
       </v-card>
       <v-card>
         <br />
@@ -92,7 +124,13 @@ export default {
   font-size: 20px;
   margin-left: 50px;
 }
+.btst {
 
+  margin-left: 50px;
+}
+p {
+  font-size: 30px;
+}
 h2 {
   text-align: center;
 }
@@ -108,7 +146,7 @@ h1 {
 .vtitel {
   font-size: 50px;
   font-weight: 300;
-  color: rgb(181, 11, 107);
+  color: black;
   text-align: center;
 }
 .box {
